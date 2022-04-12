@@ -1,6 +1,5 @@
 package ch.swisscom.loginbackend.services;
 
-import ch.swisscom.loginbackend.entities.Role;
 import ch.swisscom.loginbackend.entities.User;
 import ch.swisscom.loginbackend.repositories.UserRepository;
 import org.springframework.stereotype.Service;
@@ -23,7 +22,7 @@ public class UserService {
     public String createUser(User user){
         //user.setId(0L);
         user.setOrders(null);
-        user.setRole(Role.USER);
+        user.setRole("USER");
         userRepository.save(user);
         return "User was created successfully";
     }

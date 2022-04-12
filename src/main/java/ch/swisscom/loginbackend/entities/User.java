@@ -22,7 +22,7 @@ public class User {
 
     private String password;
 
-    private Role role;
+    private String role;
 
     @OneToMany
     @JoinColumn(name = "fk_order")
